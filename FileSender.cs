@@ -9,7 +9,7 @@ namespace client_server
 {
     public class FileSender
     {
-        public void CreateFileFromBytes(byte[] buffer)
+        public void CreateFileFromBuffer(byte[] buffer)
         {
             buffer = buffer.Skip(1).ToArray();
             byte[] patchBuffer = buffer.TakeWhile(x => x != 25).ToArray();
